@@ -6,10 +6,11 @@ type PostCardProps = {
   authorName: string;
   authorEmail: string;
   authorImageUrl?: string;
+  onDelete?: () => void;
 };
 
 export default function PostCard(props: PostCardProps) {
-  const { title, content, authorName, authorEmail, authorImageUrl } = props;
+  const { title, content, authorName, authorEmail, authorImageUrl, onDelete } = props;
 
   return (
     <div className="w-full p-3 border-2 border-gray-500 duration-200 rounded shadow-md cursor-pointer flex flex-col motion-safe:hover:scale-105">
@@ -29,6 +30,14 @@ export default function PostCard(props: PostCardProps) {
           <p className="text-sm font-medium text-gray-700">{authorName}</p>
           <p className="text-sm text-gray-400">{authorEmail}</p>
         </div>
+        {onDelete && (
+          <button
+            className="ml-auto text-sm px-2 rounded-md border-2 border-red-500 text-red-500 hover:bg-red-100"
+            onClick={onDelete}
+          >
+            Delete
+          </button>
+        )}
       </div>
     </div>
   );
