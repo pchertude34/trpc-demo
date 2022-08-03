@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import PostCard from '../components/PostCard';
 import PublishPostForm from '../components/PublishPostForm';
+import { AUTHOR_ID } from '../utils/constants';
 
 export default function TrpcPostsPage() {
   return (
