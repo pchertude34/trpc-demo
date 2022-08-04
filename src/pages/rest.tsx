@@ -1,6 +1,8 @@
+import axios from 'axios';
 import Head from 'next/head';
 import PostCard from '../components/PostCard';
 import PublishPostForm from '../components/PublishPostForm';
+import type { AxiosResponse } from 'axios';
 import { AUTHOR_ID } from '../utils/constants';
 
 export default function RestPostsPage() {

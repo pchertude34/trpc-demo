@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import { trpc } from '../utils/trpc';
 import PostCard from '../components/PostCard';
 import PublishPostForm from '../components/PublishPostForm';
 import { AUTHOR_ID } from '../utils/constants';
